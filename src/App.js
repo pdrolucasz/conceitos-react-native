@@ -36,14 +36,14 @@ export default function App() {
 
   return (
     <>
-      <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
+      <StatusBar barStyle="light-content" backgroundColor="#2f225b" />
       <SafeAreaView style={styles.container}>
         
           <FlatList 
             data={repositories}
             keyExtractor={repository => repository.id}
             renderItem={({ item }) => (
-                <View key={item.id} style={styles.repositoryContainer}>
+                <View style={styles.repositoryContainer}>
                   <Text style={styles.repository}>
                     {item.title}
                   </Text>
@@ -86,7 +86,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#7159c1",
+    backgroundColor: "#2f225b",
   },
   repositoryContainer: {
     marginBottom: 15,
@@ -125,11 +125,12 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   buttonText: {
-    fontSize: 14,
+    fontSize: 15,
     fontWeight: "bold",
     marginRight: 10,
     color: "#fff",
     backgroundColor: "#7159c1",
     padding: 15,
+    textAlign: 'center'
   },
 });
